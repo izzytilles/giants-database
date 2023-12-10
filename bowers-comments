@@ -1,0 +1,5 @@
+Part 3
+Grade: 2/2
+Overall looks good.
+Relationship types shouldn't have key attributes. 
+1..* constraints hard to enforce in relational model (min 1 part).
