@@ -1,0 +1,28 @@
+{
+  "name": "project-izzytilles",
+  "version": "1.0.0",
+  "description": "Youtube video link: https://youtu.be/L5LnYh4P8fU",
+  "main": "giantsdb.js",
+  "scripts": {
+    "start": "node giantsdb.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/izzytilles/project-izzytilles.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/izzytilles/project-izzytilles/issues"
+  },
+  "homepage": "https://github.com/izzytilles/project-izzytilles#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "mysql2": "^3.16.0"
+  }
+}

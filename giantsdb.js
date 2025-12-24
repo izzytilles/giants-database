@@ -10,17 +10,26 @@ const express = require('express');
 const path = require('path');
 
 // the credential info
-const config = require('./config.json');
+// Use environment variables in production, config.json in development
+const config = {
+    host: process.env.DB_HOST || require('./config.json').host,
+    user: process.env.DB_USER || require('./config.json').user,
+    password: process.env.DB_PASSWORD || require('./config.json').password,
+    database: process.env.DB_NAME || require('./config.json').database
+};
 
 // queries defined in other file 
 const lib = require('./lib');
 
-// create and config the express application on localhost:3000
+// create and config the express application
+const PORT = process.env.PORT || 3000;
 var app = express();
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.listen(3000);
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
 
 // define menu items
 const menuItems = [
